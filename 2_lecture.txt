@@ -1,0 +1,39 @@
+2 Lecture et écriture
+
+Exercice 2.1
+
+231
+462
+
+Exercice 2.2
+
+Variables nb, carre en Entier
+Début
+Ecrire « Entrez un nombre »
+Lire nb
+carr ← nb * nb
+Ecrire « Son carré est : », carre
+Fin
+
+Exercice 2.3
+
+Variable prenom en Caractère
+Début
+Ecrire « Quel est votre prénom ? »
+Lire prenom
+Ecrire « Bonjour ', prenom, ' ! »
+Fin
+
+Exercice 2.4
+
+Variables nb, ht, tva, ttc en Numérique
+Début
+Ecrire « Entrez le prix hors taxe »
+Lire ht
+Ecrire « Entrez le nombre d’articles »
+Lire nb
+Ecrire « Entrez le taux de TVA »
+Lire tva
+ttc ← nb * ht * (1+tva)
+Ecrire « Le prix toute taxe est », ttc
+Fin

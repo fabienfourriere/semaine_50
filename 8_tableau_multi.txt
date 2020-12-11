@@ -1,0 +1,121 @@
+8 - Les tableaux multidimensionnels
+
+Exercice 8.1
+
+Tableau Tab(5, 12) en Entier
+Debut
+Pour i ← 0 à 5
+Pour j ← 0 à 12
+Tab(i, j) ← 0
+j Suivant
+i Suivant
+Fin
+
+Exercice 8.2
+
+Il remplit un tableau de 2 lignes et 3 colonnes avec comme première valeur 1 et la valeur suivante additionne 1 à la valeur précédente
+Ce tableau est rempli en suivant l'ordre des lignes.
+
+Exercice 8.3
+
+Il affiche les mêmes valeurs celui de l'exercice précédent mais en suivant cette fois ci l'ordre des colonnes.
+
+Exercice 8.4
+
+Il remplit un tableau de 4 lignes et deux colonnes dans l'ordre des lignes avec des valeurs correspondant à l'addition du numéro de ligne et du numéro de colonne.
+
+Exercice 8.5
+
+1) Il remplit un tableau dans le même ordre que l'exercice précédent mais en prenant cette fois ci comme première valeur 1 et avec comme valeur la valeur précédente additionné de 1.
+
+2) Même chose que le cas précédent sauf que cette fois ci les valeurs sont additionnés par colonne
+
+Exercice 8.6
+
+Variables i, j, im, jm en Numérique
+Tableau Tab(12, 8) en Numérique
+Debut
+(Déclaration du tableau)
+im ← 0
+jm ← 0
+Pour i ← 0 à 12
+Pour j ← 0 à 8
+Si Tab(i,j) > Tab(im,jm) Alors
+im ← i
+jm ← j
+FinSi
+j Suivant
+i Suivant
+Ecrire « Le plus grand élément est : », Tab(im, jm)
+Ecrire « Il se trouve en position », im, « ; », jm
+Fin 
+
+Exercice 8.7
+
+Variables i, j , posi, posj, i2, j2 en Entier
+Variables Correct, MouvOK en Booléen
+Tableau Damier(7, 7) en Booléen
+Tableau Mouv(3, 1) en Entier
+Debut
+Mouv(0, 0) ← -1
+Mouv(0, 1) ← -1
+Mouv(1, 0) ← -1
+Mouv(1, 1) ← 1
+Mouv(2, 0) ← 1
+Mouv(2, 1) ← -1
+Mouv(3, 0) ← 1
+Mouv(3, 1) ← 1
+Pour i ← 0 à 7
+Pour j ← 0 à 7
+Damier(i, j) ← Faux
+j Suivant
+i Suivant
+Correct ← Faux
+TantQue Non Correct
+Ecrire « Entrez la ligne de votre pion : »
+Lire posi
+Si posi >= 0 et posi <= 7 Alors
+Correct ← vrai
+Finsi
+Fintantque
+Correct ← Faux
+TantQue Non Correct
+Ecrire « Entrez la colonne de votre pion : »
+Lire posj
+Si posj >= 0 et posj <= 7 Alors
+Correct ← Vrai
+Finsi
+Fintantque
+Damier(posi, posj) ← Vrai
+Ecrire « Quel déplacement ? »
+Ecrire « - 0: en haut à gauche »
+Ecrire « - 1: en haut à droite »
+Ecrire « - 2: en bas à gauche »
+Ecrire « - 3: en bas à droite »
+Correct ← Faux
+TantQue Non Correct
+Lire Dep
+Si Dep >= 0 et Dep <= 3 Alors
+Correct ← Vrai
+FinSi
+FinTantQue
+i2 ← posi + Mouv(Dep, 0)
+j2 ← posj + Mouv(Dep, 1)
+MouvOK ← i2 >= 0 et i2 <= 7 et j2 >= 0 et j2 <= 7
+Si MouvOK Alors
+Damier(posi, posj) ← Faux
+Damier(i2, j2) ← Vrai
+Pour i ← 0 à 7
+Pour j ← 0 à 7
+Si Damier(i, j) Alors
+Ecrire « O »
+Sinon
+Ecrire « X »
+FinSi
+j suivant
+Ecrire « Mouvement correct »
+i suivant
+Sinon
+Ecrire « Mouvement incorrect »
+FinSi
+Fin

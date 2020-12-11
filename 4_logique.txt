@@ -1,0 +1,223 @@
+4 – Encore de la logique
+
+Exercice 4.1
+
+Si Tutu<= Toto + 4 ET Tata <> « OK » Alors
+Tutu ← Tutu – 1
+Sinon
+Tutu ← Tutu + 1
+Finsi
+
+Exercice 4.2
+
+Variables, h, m en Numérique
+Début
+Ecrire « Entrez l’heure »
+Lire h, m
+m ← m+1
+Si m=60 Alors
+m ← 0
+h ← h+1
+Finsi
+Si h=24 Alors
+h ← 0
+Finsi
+Ecrire « Dans une minute il sera «, h, » heure «, m, » minute »
+Fin
+
+Exercice 4.3
+
+Variables, h, m, s en Numérique
+Début
+Ecrire « Entrez l’heure »
+Lire h, m, s
+s ← s+1
+Si s=60 Alors
+s ←0
+m ← m+1
+Finsi
+Si m=60 Alors
+m ← 0
+h ← h+1
+Finsi
+Si h=24 Alors
+h ← 0
+Finsi
+Ecrire « Dans une seconde il sera «, h, » heure «, m, » minute «, s, » seconde »
+Fin
+
+Exercice 4.4
+
+Variables n, p en Numérique
+Début
+Ecrire « Nombre de photocopies »
+Si n=<10 Alors
+p ← n*0.1
+Sinonsi n=<30 Alors
+p ← n*0.1 + (n-10) *0.09
+Sinon
+p ← 10*0.1 + 20*0.09 + (n-30) * 0.08
+Finsi
+Ecrire « Le prix total est », p 
+Fin
+
+Exercice 4.5
+
+Variables a en Numérique
+Variables s en caractère
+Variables C1, C2 en booléen
+Début
+Ecrire « Entrez le sexe (M/F) »
+Lire s
+Ecrire « Entrez l’âge »
+Lire a
+C1 ← a>20 ET s=M
+C2 ← s=F ET (a>18 ET a<35)
+Si C1 OU C2 Alors
+Ecrire « Imposable »
+Sinon
+Ecrire « Non Imposable »
+Finsi
+Fin
+
+Exercice 4.6
+
+Variables A, B, C, D en Numérique
+Variables C1, C2, C3, C4 en Booléen
+Début
+Ecrire « Entrez le score des 4 candidats »
+C1 ← A > 50%
+C2 ← B > 50% OU C > 50% OU D > 50%
+C3 ← A >= B ET A >= C ET A >= D
+C4 ← A =< 12.5%
+Si C1 Alors
+Ecrire « Candidat élu »
+Sinonsi C2 Alors 
+Ecrire « Candidat battu »
+Sinonsi C3 Alors
+Ecrire « Candidat en ballotage favorable »
+Sinon
+Ecrire « Candidat en ballotage défavorable »
+Finsi
+Fin
+
+Exercice 4.7
+
+Variables âge, accident, permis, année en Numérique
+Variables C1, C2, C3 en booléen
+Variables situation en Caractère
+Début
+Ecrire « Entrez l’âge »
+Lire âge
+Ecrire « Entrez le nombre d’années de permis »
+Lire permis
+Ecrire « Entrez le nombre d’accident responsable »
+Lire accident
+Ecrire « Entrez le nombre d’années d’assurance »
+Lire année
+C1 ← âge >= 25
+C2 ← permis >2
+C3 ← année > 1
+Si Non(C1) ET Non(C2) Alors
+Si accident = 0 Alors
+situation ← rouge
+Sinon
+situation ← refusé
+Finsi
+Sinonsi (Non(C1) ET C2) OU (C1 ET Non(C2)) Alors
+Si accident = 0 Alors
+situation ← orange
+Sinonsi accident = 1 Alors
+situation ← rouge
+Sinon
+situation ← refusé
+Finsi
+Sinon
+Si accident = 0 Alors
+situation ← vert
+Sinonsi accident = 1 Alors
+situation ← orange
+Sinonsi accident = 2 Alors
+situation ← rouge
+Sinon
+situation ← refusé
+Finsi
+Finsi
+Si C3 Alors
+situation ← bleu
+Finsi
+Ecrire « Votre situation : », situation
+Fin
+
+Exercice 4.8
+
+Variables j, m, a, jm en Numérique
+Variables vj, vm, b en Booléen
+Ecrire « Entrez le numéro du jour »
+Lire j
+Ecrire « Entrez le numéro du mois »
+Lire m
+Ecrire « Entrez le numéro de l’année »
+Lire a
+Si vj ET vm Alors
+Ecrire « La date est valide »
+Sinon
+Ecrire « La date n’est pas valide »
+Finsi
+b ← a dp 400 OU (Non (a dp 100) OU a dp 4)
+jm ← 0
+vm ← m>= 1 ET m=<12
+Si vm Alors
+Si m = 2 ET b Alors
+jm ← 29
+Sinonsi m = 2 Alors
+jm ← 28
+Sinonsi m = 4 OU m = 6 OU m = 9 ou m = 11 Alors
+jm ← 30
+Sinon
+jm ← 31
+Finsi
+vj ← j>=1 et j=<jm
+Finsi
+Si m<1 OU m>12 Alors
+Ecrire « La date n’est pas valide »
+Sinonsi m=2 Alors
+Si a dp 400 Alors
+Si j<1 OU j>29 Alors
+Ecrire « La date n’est pas valide »
+Sinon
+Ecrire « La date est valide »
+Finsi
+Sinonsi a dp 100 Alors
+Si j<1 OU j>28 Alors
+Ecrire « La date n’est pas valide »
+Sinon
+Ecrire « La date est valide »
+Finsi
+Sinonsi a dp 4 Alors
+Si j<1 OU j>29 Alors
+Ecrire « La date n’est pas valide »
+Sinon
+Ecrire « La date est valide »
+Finsi
+Sinon
+Si j<1 OU j>28 Alors
+Ecrire « La date n’est pas valide »
+Sinon
+Ecrire « La date est valide »
+Finsi
+Finsi
+Sinonsi m = 4 OU m = 6 OU m = 9 OU m = 11 Alors
+Si j<1 OU j>30 Alors
+Ecrire « La date n’est pas valide »
+Sinon
+Ecrire « La date est valide »
+Finsi
+Sinon
+Si j<1 OU j>30 Alors
+Ecrire « La date n’est pas valide »
+Sinon
+Ecrire « La date est valide »
+Finsi
+Finsi
+Fin

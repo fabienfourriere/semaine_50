@@ -1,0 +1,207 @@
+5 – Les boucles
+
+Exercice 5.1
+
+Variable Rep en Entier
+Rep ← 0
+Début
+Ecrire « Entrez un nombre »
+Lire Rep
+Tantque Rep <1 OU Rep > 3
+Lire Rep
+Si Rep<1 OU Rep>3 Alors
+Ecrire « La réponse ne convient pas »
+Finsi
+FinTantque
+Fin
+
+Exercice 5.2
+
+Variable Rep en Entier
+Rep ← 0
+Début
+Ecrire « Entrez un nombre »
+Lire Rep
+Tantque Rep<10 OU Rep>20
+Lire Rep
+Si Rep<10 Alors
+Ecrire « Plus grand ! »
+Sinonsi Rep>20 Alors
+Ecrire « Plus petit ! »
+Finsi
+FinTantque
+Fin
+
+Exercice 5.3
+
+Variable n, s en Entier
+Début
+Ecrire « Entrez un nombre »
+Lire n
+s ← 0
+Ecrire « Les 10 nombres suivants sont »
+Tantque s<10
+s ← s+1
+Ecrire n+s
+FinTantque
+Fin
+
+Exercice 5.4
+
+Variables n, i en Entier
+Debut
+Ecrire "Entrez un nombre : "
+Lire n
+Ecrire "Les 10 nombres suivants sont : "
+Pour i ← 1 à 10
+Ecrire n + i
+i Suivant
+Fin
+
+Exercice 5.5
+
+Variables n, n2 en Entier
+Début
+Ecrire « Entrez un nombre »
+Lire n
+Ecrire « Sa table de multiplication est »
+Pour
+n2 ← 1 à 10
+Ecrire n, « * », n2, « = », n*n2
+n2 Suivant
+Fin
+
+Exercice 5.6
+
+Variables n, n2, s en Entier
+Début
+Ecrire « Entrez un nombre »
+Lire n
+s ← 0
+Pour n2 ← 1 à n
+s ← s + n2
+n2 Suivant
+Ecrire « La somme de ce nombre est », s
+Fin
+
+Exercice 5.7
+
+Variables n, n2, f en Entier
+Début
+Ecrire « Entrez un nombre »
+Lire n
+f ← 1
+Pour n2 ← 1 à n
+f ← f * n2
+n2 Suivant
+Ecrire « La factorielle de ce nombre est », f
+Fin
+
+Exercice 5.8
+
+Variables n, n2, g, p en Entier
+Début
+g ← 0
+Pour n2 ← 1 à 20
+Ecrire « Entrez un nombre »
+Lire n
+Si n2 = 1 OU n > g Alors
+g ← n
+p ← n2
+Finsi
+n Suivant
+Ecrire « Le plus grand nombre est », g
+Ecrire « Il se trouve à la position numéro », p
+Fin
+
+Exercice 5.9
+
+Variables n, n2, g, p, en Entier
+Début
+n ← 1
+n2 ← 0
+g ← 0
+Tantque n<>0
+Ecrire « Entrez un nombre »
+Lire n
+n2 ← n2 + 1
+Si n2 = 1 OU n > g Alors
+g ← n
+p ← n2
+Finsi
+FinTantque
+Ecrire « Le plus grand nombre est », g
+Ecrire « Il se trouve à la position numéro », p
+Fin
+
+Exercice 5.10
+
+Variables p, sd, sp, r, b10, b5 en Entier
+Début
+p ← 1
+sd ← 0
+Tantque p<>0
+Ecrire « Entrez le prix »
+Lire p
+sd ← sd + p
+FinTantque
+Ecrire « Vous devez payer », sd
+Ecrire « Somme payé »
+Lire sp
+r ← sp – sd
+b10 ← 0
+Tantque r>=10
+b10 ← b10 + 1
+r ← r – 10
+FinTantque
+b5 ← 0
+Si r>=5 Alors
+b5 ← 1
+r ← r – 5
+Finsi
+Ecrire « Somme rendu »
+Ecrire « Billets de 10€ », b10
+Ecrire « Billets de 5€ », b5
+Ecrire « Pièces de 1€ », r
+Fin
+
+Exercice 5.11
+
+Variables N, P, i, Num, Den1, Den2 en Entier
+Debut Ecrire «Entrez le nombre de chevaux partants :»
+Lire N
+Ecrire «Entrez le nombre de chevaux joués :»
+Lire P
+Num ← 1
+Pour i ← 2 à N
+Num ← Num * i
+i Suivant
+Den1 ← 1
+Pour i ← 2 à N-P
+Den1 ← Den1 * i
+i Suivant
+Den2 ← 1
+Pour i ← 2 à P
+Den2 ← Den2 * i
+i Suivant
+Ecrire «Dans l’ordre, une chance sur », Num / Den1
+Ecrire «Dans le désordre, une sur », Num / (Den1 * Den2)
+Fin
+
+Certaines boucles sont redondantes sur cette version.
+
+Variables N, P, i, A, B en Numérique
+Debut
+Ecrire «Entrez le nombre de chevaux partants : »
+Lire N
+Ecrire «Entrez le nombre de chevaux joués :»
+Lire P
+A ← 1
+B ← 1
+Pour i ← 1 à P
+A ← A * (i + N - P)
+B ← B * i
+i Suivant
+Ecrire «Dans l’ordre, une chance sur », A
+Ecrire «Dans le désordre, une chance sur », A / B
+Fin

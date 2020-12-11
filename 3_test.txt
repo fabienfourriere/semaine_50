@@ -1,0 +1,86 @@
+Partie 3 – Les tests
+
+Exercice 3.1
+
+Variable n en Entier
+Début
+Ecrire « Entrez un nombre »
+Lire n
+Si n>0 Alors
+Ecrire « Ce nombre est positif »
+Sinon
+Ecrire « Ce nombre est négatif »
+Finsi
+Fin
+
+Exercice 3.2
+Variables n1, n2 en Entier
+Début
+Ecrire « Entrez deux nombres »
+Lire n1, n2
+Si (m<0 ET n<0) OU (m>0 ET n>0) Alors
+Ecrire « Ce produit est positif »
+Sinon
+Ecrire « Ce produit est négatif »
+Finsi
+Fin
+
+Exercice 3.3
+
+Variables n1, n2, n3 en Caractère
+Début
+Ecrire « Entrez trois noms »
+Lire n1, n2, n3
+Si n1<n2 ET n2<n3 Alors
+Ecrire « Les noms sont classés par ordre alphabétique »
+Sinon
+Ecrire « Les noms ne sont pas classés par ordre alphabétique »
+Finsi
+Fin
+
+Exercice 3.4
+
+Variables n en Entier
+Début
+Ecrire « Entrez un nombre »
+Lire n
+Si n=0 Alors
+Ecrire « Ce nombre est nul »
+Sinonsi n>0
+Ecrire « Ce nombre est positif »
+Sinon
+Ecrire « Ce nombre est négatif »
+Finsi
+Fin
+
+Exercice 3.5
+
+Variables n1, n2 en Entier
+Début
+Ecrire « Entrez deux nombres »
+Lire n1, n2
+Si n1=0 OU n2=0 Alors
+Ecrire « Ce produit est nul »
+Sinonsi (n1<0 ET n2<0) OU (n1>0 ET n2>0) Alors
+Ecrire « Ce produit est positif »
+Sinon
+Ecrire « Ce produit est négatif » 
+Finsi
+Fin
+
+Exercice 3.6
+
+Variables n en Entier
+Début
+Ecrire « Entrez un nombre »
+Lire n
+Si n >=12 Alors
+Ecrire « Catégorie Cadet »
+Sinonsi n=10 OU n=11 Alors
+Ecrire « Catégorie Minime »
+Sinonsi n=8 OU n=9 Alors
+Ecrire « Catégorie Pupille »
+Sinonsi n=<6 Alors
+Ecrire « Catégorie Poussin »
+Finsi
+Fin

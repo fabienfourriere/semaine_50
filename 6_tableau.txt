@@ -1,0 +1,213 @@
+6 - Les tableaux
+
+Exercice 6.1
+
+Tableau Num(6) en Numérique
+Variable i en Numérique
+Debut
+Pour i ← 0 à 6
+Num(i) ← 0
+i Suivant
+Fin
+
+Exercice 6.2
+
+Tableau Voy(5) en Caractère
+Debut
+Voy(0) ← « a »
+Voy(1) ← « e »
+Voy(2) ← « i »
+Voy(3) ← « o »
+Voy(4) ← « u »
+Voy(5) ← « y »
+Fin
+
+Exercice 6.3
+
+Tableau Note(8) en Numérique
+Variable i en Numérique
+Pour i ← 0 à 8
+Ecrire « Entrez la note numéro », i + 1
+Lire Note(i)
+i Suivant
+Fin
+
+Exercice 6.4
+
+Tableau de six valeurs qui affiche les nombres carré de 0 à 5
+
+Il y'a possibilité de retirer la deuxième boucle
+
+Tableau Nb(5) en Entier
+Variable i en Entier
+Début
+Pour i ← 0 à 5
+Nb(i) ← i * i
+Ecrire Nb(i)
+i suivant
+Fin
+
+Exercice 6.5
+
+Ce tableau affiche sept valeurs avec pour valeur de départ 1 et la valeur suivante additionne de 2 la valeur précédente.
+
+La aussi on peut retirer la deuxième boucle
+
+Tableau N(6) en Entier
+Variables i, k en Entier
+Début
+N(0) ← 1
+Ecrire N(0)
+Pour k ← 1 à 6
+N(k) ← N(k-1) + 2
+Ecrire N(k)
+k Suivant
+Fin
+
+Exercice 6.6
+
+Ce tableau affiche huit valeurs, les deux premières valeurs sont de 1 et les suivantes correspondent à l'addition des deux résultats précédents
+
+Exercice 6.7
+
+Tableau Note(8) en Numérique
+Variable m en Numérique
+Debut
+m ← 0
+Pour i ← 0 à 8
+Ecrire « Entrez la note numéro », i + 1
+Lire Note(i)
+m ← m + Note(i)
+i Suivant
+Ecrire « La moyenne est de », m/9
+Fin
+
+Exercice 6.8
+
+Variables N, Npos, Nneg en Numérique
+Tableau Tab() en Numérique
+Debut
+Ecrire « Entrez le nombre de valeurs du tableau : »
+Lire N
+Redim Tab(Nb-1)
+Npos ← 0
+Nneg ← 0
+Pour i ← 0 à N - 1
+Ecrire « Entrez le nombre numéro », i + 1
+Lire Tab(i)
+Si Tab(i) >= 0 Alors
+Npos ← Npos + 1
+Sinon
+Nneg ← Nneg + 1
+Finsi
+i Suivant
+Ecrire « Nombre de valeurs positives : », Npos
+Ecrire « Nombre de valeurs négatives : », Nneg
+Fin
+
+Exercice 6.9
+
+Variables i, S, N en Numérique
+Tableau Tab() en Numérique
+Debut
+Redim Tab(N-1)
+(algorithme du tableau)
+S ← 0
+Pour i ← 0 à N - 1
+Som ← S + Tab(i)
+i Suivant
+Ecrire « La somme des valeurs du tableau est de : », S
+Fin
+
+Exercice 6.10
+
+Variables i, N en Numérique
+Tableaux Tab1(), Tab2(), Tab3() en Numérique
+Debut
+Redim Tab3(N-1)
+(Les deux premiers tableaux sont déjà saisis)
+Pour i ← 0 à N - 1
+Tab3(i) ← Tab1(i) + Tab2(i)
+i Suivant
+Fin
+
+Exercice 6.11
+
+Variables i, j, N1, N2, S en Numérique
+Tableaux Tab1(), Tab2() en Numérique
+Debut
+(Les deux premiers tableaux sont déjà saisis)
+S ← 0
+Pour i ← 0 à N1 – 1
+Pour j ← 0 à N2 – 1
+S ← S + Tab1(i) * Tab2(j)
+j Suivant
+i Suivant
+Ecrire « Le schtroumpf des deux tableaux est de : », S
+Fin
+
+Exercice 6.12
+
+Variables N, i en Numérique
+Tableau Tab() en Numérique
+Debut
+Ecrire « Entrez le nombre de valeurs : »
+Lire N
+Redim Tab(N-1)
+Pour i ← 0 à N - 1
+Ecrire « Entrez le nombre numéro », i + 1
+Lire Tab(i)
+i Suivant
+Ecrire « Le nouveau tableau est : »
+Pour i ← 0 à N – 1
+Tab(i) ← Tab(i) + 1
+Ecrire Tab(i)
+i Suivant
+Fin
+
+Exercice 6.13
+
+Variables N, P en Numérique
+Tableau Tab() en Numérique
+Ecrire « Entrez le nombre de valeurs : »
+Lire N
+Redim Tab(N-1)
+Pour i ← 0 à N - 1
+Ecrire « Entrez le nombre numéro », i + 1
+Lire Tab(i)
+i Suivant
+P ← 0
+Pour i ← 0 à N - 1
+Si Tab(i) > Tab(P) alors
+P ← i
+Finsi
+i Suivant
+Ecrire « Valeur la plus grande : », Tab(P)
+Ecrire « Position de cette valeur : », P
+Fin
+
+Exercice 6.14
+
+Variables N, i, S, M, Ne en Numérique
+Tableau Tab() en Numérique
+Debut
+Ecrire « Entrez le nombre de notes à saisir : »
+Lire N
+Redim Tab(N-1)
+Pour i ← 0 à N - 1
+Ecrire « Entrez le nombre numéro », i + 1
+Lire Tab(i)
+i Suivant
+S ← 0
+Pour i ← 0 à N - 1
+S ← S + Tab(i)
+i Suivant
+M ← S / N
+NbSup ← 0
+Pour i ← 0 à N - 1
+Si Tab(i) > M Alors
+Ne ← Ne + 1
+FinSi
+i Suivant
+Ecrire Ne, « élèves au-dessus de la moyenne de la classe »
+Fin
